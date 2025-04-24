@@ -1,0 +1,99 @@
+:root {
+  --balao-user: red;
+  --balao-ai: blue;
+}
+section.interacao {
+  height: 100%;
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+section.interacao > div.historico {
+  width: 100%;
+  height: 80%;
+  margin: 24px;
+  border: 2px solid white;
+  border-radius: 24px;
+  padding: 8px 24px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  gap: 8px;
+}
+section.interacao > div.historico > div.historico > div.row {
+  width: 100%;
+
+}
+div.historico > div.row > span {
+  display: inline-block;
+  position: relative;
+  padding: 8px;
+  border-radius: 24px;
+}
+
+div.historico > div.row > span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 16px 0 0 16px;
+  border-color: transparent transparent transparent #FF4532;
+  transform: rotate(0deg);
+}
+
+div.historico > div.row > span.user {
+  float: right;
+  background-color: var(--balao-user);
+}
+
+div.historico > div.row > span.user::after {
+  border-color: transparent transparent transparent var(--balao-user);
+}
+
+div.historico > div.row > span.assistant {
+  float: left;
+  background-color: var(--balao-ai);
+}
+div.historico > div.row > span.assistant::after {
+  border-color: transparent transparent transparent var(--balao-ai);
+}
+
+div.input {
+  height: 20%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 16px;
+}
+
+div.input > textarea {
+  width: 70vw;
+  height: 80%;
+  border-radius: 24px;
+  /* margin: 0 36px; */
+  /* margin: auto;
+  */
+  padding: 16px;
+  border: 2px solid white;
+
+}
+
+div.input > button {
+  /* width: 5vw; */
+  height: 32px;
+  margin: 0;
+  padding: 16px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 0;
+}
